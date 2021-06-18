@@ -1,0 +1,191 @@
+
+// Desktop version
+
+.grid {
+    display: grid;
+    outline: 3px solid;
+    width:90%;
+    margin: 90px auto;
+    height:770px;
+    grid-template-columns: 1fr 1fr (auto-fill);
+    grid-template-rows: 1fr 1fr ;
+    gap:20px;
+
+    grid-template-areas: 
+
+    "box1 box3"
+    "box2 box3"
+    
+    ;
+
+
+    .grid__item--1 {
+        border: 1px solid gray;
+        grid-row-start:1 ;
+        grid-row-end:2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-area: box1;
+        
+        .imagen1 {
+            display: flex;
+            width: 90%;
+            height: auto;
+            margin: 1em;
+        }
+
+
+        .title1 {
+           font-family: 'poppins';
+           display:flex;
+           justify-content: left;
+           margin-left: 1em;
+           font-size: large;
+           font-weight: bold;
+         
+        }
+
+        .text-box1 {
+            display:flex;
+            justify-content: left;
+            margin-left: 1em;
+            font-family: 'ubuntu';
+            font-weight: regular;
+            font-size: small;
+        }
+
+        span {
+            font-family: 'poppins';
+            font-weight: bold;
+            font-size: medium;
+            margin-left: 1em;
+        }
+    }
+
+    .grid__item--2 {
+        border: 1px solid gray;
+        grid-row-start:4;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: -3;
+        
+        grid-area:box2;
+
+        .imagen2 {
+            display: flex;
+            width: 90%;
+            height: auto;
+            margin: 1em;
+        }
+
+
+        .title2 {
+            font-family: 'poppins';
+            display:flex;
+            justify-content: left;
+            margin-left: 1em;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .text-box2 {
+            display:flex;
+            justify-content: left;
+            margin-left: 1em;
+            font-family: 'ubuntu';
+            font-weight: regular;
+            font-size: small;
+        }
+
+        span {
+            font-family: 'poppins';
+            font-weight: bold;
+            font-size: medium;
+            margin-left: 1em;
+        }
+
+    }
+    .grid__item--3 {
+        border: 1px solid gray;
+        grid-row-start: 1;
+        grid-row-end:3;
+        grid-column-start:0 ;
+        grid-column-end: 0;
+        
+        grid-template-columns: 100%;
+        grid-template-rows: 50%;
+        grid-area:box3;
+        
+        .imagen3 {
+            display: flex;
+            width: 45%;
+            border-radius: 50%;
+            border: 1px solid black;
+            height: auto;
+            margin: 0 auto;
+            
+        }
+
+
+        .title3 {
+            font-family: 'poppins';
+            display:flex;
+            justify-content: center;
+            margin-left: 1em;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .text-box3 {
+            display:flex;
+            justify-content: right;
+            margin-left: 1em;
+            font-family: 'ubuntu';
+            font-weight: regular;
+            font-size: small;
+        }
+
+        .container {
+            width: 98%;
+            height: 5%;
+            background: gray;
+            color:white;
+            font-family: 'poppins';
+            font-size: large;
+            justify-content: last baseline;
+        }
+                                     //============ segunda imagen box 3
+        .imagen4 {            
+            display: flex;
+            width: 60%;
+            height:auto;
+            margin: 0 auto;
+            position: relative;
+            
+        }
+
+        ul, li {
+            font-family: 'poppins';
+            font-weight: regular;
+            font-size: small;
+            text-align: left;
+            vertical-align: middle;
+
+        }
+    }
+}
+
+
+
+
+// Movile version
+
+@media (min-width: 400px){
+    .hero {
+        flex-direction: column;
+
+    }
+
+    
+}
+

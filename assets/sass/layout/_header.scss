@@ -1,0 +1,117 @@
+
+
+header{
+    background-color: #000000;
+    color: #ffffff;
+    width: 100%;
+    padding-top: 1em;
+    
+}
+
+header::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.logo{
+    width: 27px;
+    height: auto;;
+    margin-left: 1em;
+}
+.logo span{
+    font-weight: 300;
+}
+.site-nav{
+    top:100%;
+    right:0;
+    position: absolute;
+    background: #464655;
+    clip-path: circle(0px at top right);
+    transition: clip-path ease-in-out 700ms;
+}
+.site-nav-open{
+    clip-path: circle(150% at top right);
+}
+.site-nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.site-nav li{
+    border-bottom: 1px solid #575766;
+}
+.site-nav li:last-child{
+    border-bottom: none;
+}
+.site-nav a{
+    color: #ffffff;
+    display: block;
+    padding: 2em 6em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.site-nav a:hover,
+.site-nav a:focus{
+    background: #2E1503;
+    color: #464655;
+}
+
+
+
+.menu-toggle{
+   
+    padding: 1em;
+    position: absolute;
+    top: .5em;
+    right: .5em;
+    
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after{
+    content: '';
+    display: block;
+    background: #ebebd3;
+    height: 3px;
+    width: 1.75em;
+    border-radius: 3px;
+    transition: all ease-in-out 500ms;
+}
+.hamburger::before{
+    transform: translateY(-6px);
+}
+.hamburger::after{
+    transform: translateY(3px);
+}
+
+//  version Desktop =================================
+
+@media (min-width:768px){
+  .menu-toggle{
+      display: none;
+  } 
+  .site-nav{
+      height: auto;
+      position: relative;
+      background: transparent;
+      float: right;
+      margin-right: 10px;
+      clip-path: initial;
+  } 
+  .site-nav li{
+      display: inline-block;
+      border: none;
+  }
+
+  .site-nav a{
+      padding: 0;
+      margin-left: 3em;
+  }
+
+  .site-nav a:hover,
+  .site-nav a:focus{
+      background: transparent;
+  }
+
+}

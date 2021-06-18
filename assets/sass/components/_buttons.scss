@@ -1,0 +1,31 @@
+.boton {
+    background: #FFA500;
+    border-radius: 10%;
+    justify-content: right;
+    float: inline-end;
+
+    .boton:hover {
+        background: #FFAF6D;
+
+    }
+}
+ // animacion ==================================
+@keyframes backAndForward {      
+    0%{ 
+        left:0px;
+    }
+    50% {
+        left:100px;
+        
+    }
+    100% {
+        left:0px;
+    }  
+  
+   
+}
+.animation__one {
+    animation-name: mover;
+    animation-duration: 1s;
+    animation: backAndForward 3s ease-in-out infinite;
+}

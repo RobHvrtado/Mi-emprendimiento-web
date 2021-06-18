@@ -1,0 +1,22 @@
+.hero {
+    width: 600px;
+    height: auto;
+    background: #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:bottom;
+    display:flex;
+    position:relative;
+    justify-content:center;
+    align-content: center;
+    margin: 0 auto;
+    border-top: o auto;
+    padding: 3em;
+}
+
+
+@media (min-width: 400px){
+    .hero {
+        flex-direction: column;
+    }
+}

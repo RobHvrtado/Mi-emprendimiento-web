@@ -1,0 +1,358 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #060606;
+  align-content: center;
+  font-family: "ubuntu", sans-serif;
+  display: grid;
+}
+
+.boton {
+  background: #FFA500;
+  border-radius: 10%;
+  justify-content: right;
+  float: inline-end;
+}
+.boton .boton:hover {
+  background: #FFAF6D;
+}
+
+@keyframes backAndForward {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: 100px;
+  }
+  100% {
+    left: 0px;
+  }
+}
+.animation__one {
+  animation-name: mover;
+  animation-duration: 1s;
+  animation: backAndForward 3s ease-in-out infinite;
+}
+
+header {
+  background-color: #000000;
+  color: #ffffff;
+  width: 100%;
+  padding-top: 1em;
+}
+
+header::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.logo {
+  width: 27px;
+  height: auto;
+  margin-left: 1em;
+}
+
+.logo span {
+  font-weight: 300;
+}
+
+.site-nav {
+  top: 100%;
+  right: 0;
+  position: absolute;
+  background: #464655;
+  clip-path: circle(0px at top right);
+  transition: clip-path ease-in-out 700ms;
+}
+
+.site-nav-open {
+  clip-path: circle(150% at top right);
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav li {
+  border-bottom: 1px solid #575766;
+}
+
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
+.site-nav a {
+  color: #ffffff;
+  display: block;
+  padding: 2em 6em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #2E1503;
+  color: #464655;
+}
+
+.menu-toggle {
+  padding: 1em;
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  display: block;
+  background: #ebebd3;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+    margin-right: 10px;
+    clip-path: initial;
+  }
+
+  .site-nav li {
+    display: inline-block;
+    border: none;
+  }
+
+  .site-nav a {
+    padding: 0;
+    margin-left: 3em;
+  }
+
+  .site-nav a:hover,
+.site-nav a:focus {
+    background: transparent;
+  }
+}
+.hero {
+  width: 600px;
+  height: auto;
+  background: #ffffff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  border-top: o auto;
+  padding: 3em;
+}
+
+@media (min-width: 400px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+.grid {
+  display: grid;
+  outline: 3px solid;
+  width: 90%;
+  margin: 90px auto;
+  height: 770px;
+  grid-template-columns: 1fr 1fr auto-fill;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px;
+  grid-template-areas: "box1 box3" "box2 box3";
+}
+.grid .grid__item--1 {
+  border: 1px solid gray;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-area: box1;
+}
+.grid .grid__item--1 .imagen1 {
+  display: flex;
+  width: 90%;
+  height: auto;
+  margin: 1em;
+}
+.grid .grid__item--1 .title1 {
+  font-family: "poppins";
+  display: flex;
+  justify-content: left;
+  margin-left: 1em;
+  font-size: large;
+  font-weight: bold;
+}
+.grid .grid__item--1 .text-box1 {
+  display: flex;
+  justify-content: left;
+  margin-left: 1em;
+  font-family: "ubuntu";
+  font-weight: regular;
+  font-size: small;
+}
+.grid .grid__item--1 span {
+  font-family: "poppins";
+  font-weight: bold;
+  font-size: medium;
+  margin-left: 1em;
+}
+.grid .grid__item--2 {
+  border: 1px solid gray;
+  grid-row-start: 4;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: -3;
+  grid-area: box2;
+}
+.grid .grid__item--2 .imagen2 {
+  display: flex;
+  width: 90%;
+  height: auto;
+  margin: 1em;
+}
+.grid .grid__item--2 .title2 {
+  font-family: "poppins";
+  display: flex;
+  justify-content: left;
+  margin-left: 1em;
+  font-size: large;
+  font-weight: bold;
+}
+.grid .grid__item--2 .text-box2 {
+  display: flex;
+  justify-content: left;
+  margin-left: 1em;
+  font-family: "ubuntu";
+  font-weight: regular;
+  font-size: small;
+}
+.grid .grid__item--2 span {
+  font-family: "poppins";
+  font-weight: bold;
+  font-size: medium;
+  margin-left: 1em;
+}
+.grid .grid__item--3 {
+  border: 1px solid gray;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 0;
+  grid-column-end: 0;
+  grid-template-columns: 100%;
+  grid-template-rows: 50%;
+  grid-area: box3;
+}
+.grid .grid__item--3 .imagen3 {
+  display: flex;
+  width: 45%;
+  border-radius: 50%;
+  border: 1px solid black;
+  height: auto;
+  margin: 0 auto;
+}
+.grid .grid__item--3 .title3 {
+  font-family: "poppins";
+  display: flex;
+  justify-content: center;
+  margin-left: 1em;
+  font-size: large;
+  font-weight: bold;
+}
+.grid .grid__item--3 .text-box3 {
+  display: flex;
+  justify-content: right;
+  margin-left: 1em;
+  font-family: "ubuntu";
+  font-weight: regular;
+  font-size: small;
+}
+.grid .grid__item--3 .container {
+  width: 98%;
+  height: 5%;
+  background: gray;
+  color: white;
+  font-family: "poppins";
+  font-size: large;
+  justify-content: last baseline;
+}
+.grid .grid__item--3 .imagen4 {
+  display: flex;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+}
+.grid .grid__item--3 ul, .grid .grid__item--3 li {
+  font-family: "poppins";
+  font-weight: regular;
+  font-size: small;
+  text-align: left;
+  vertical-align: middle;
+}
+
+@media (min-width: 400px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+footer {
+  background-color: black;
+  color: #ffffff;
+  background-repeat: no-repeat;
+  height: auto;
+  margin: 0 auto;
+  padding: 3rem;
+  width: 90%;
+  justify-content: center;
+  display: flex;
+}
+footer .footer-text {
+  text-align: left;
+  margin-right: 20px;
+}
+footer .footer-text2 {
+  text-align: right;
+  justify-items: right;
+  margin-left: 15rem;
+  position: relative;
+  display: flex;
+  float: center;
+}
+footer .text {
+  float: right;
+  margin-right: 10px;
+  justify-content: right;
+  justify-items: right;
+}
+
+/*# sourceMappingURL=main.css.map */
